@@ -12,7 +12,7 @@ const VehicleList = () =>{
     useEffect(() => {
         requestFromBackend(`/api/vehicles/${id}`,setVehicle, setIsLoading,setErrorText);
     }, [id]);
-    console.log(isLoading);
+
     return(
         <Fragment>
         <h2> Vehicles List</h2>    

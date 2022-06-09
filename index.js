@@ -1,3 +1,4 @@
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const express = require('express');
 const dealerRoutes = require('./Dealer/dealer');
@@ -5,7 +6,7 @@ const vehicleRoutes = require('./Vehicle/vehicle');
 const app = express();
 const port = process.env.PORT || 5000;
 const path = require('path');
-require('dotenv').config();
+
 
 app.use(bodyParser.json());
 app.use((req,res,next)=>{

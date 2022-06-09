@@ -1,9 +1,7 @@
 export const requestFromBackend = async (url, setcb, loadingFuction, setErrorText) =>{
-    console.log('fetching...');
     loadingFuction(true);
     const fetchFromAPI = () =>{
         return new Promise((res,rej)=>{
-            console.log('fetching2...')
             fetch(url)
             .then(res => res.json())
             .then(data =>{
