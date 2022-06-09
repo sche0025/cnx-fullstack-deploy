@@ -7,6 +7,15 @@ const app = express();
 const port = process.env.PORT || 5000;
 const path = require('path');
 
+app.use('/', dealerRoutes);
+app.use('/', vehicleRoutes);
+
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static('./cnx-frontend/build'));
+  app.get('*',(req, res)=>{
+    res.sendFile(path.resolve(__dirname,'cnx-frontend/build','index.html'));
+  })
+}
 
 app.use(bodyParser.json());
 app.use((req,res,next)=>{
@@ -20,16 +29,6 @@ app.use((req,res,next)=>{
     next();
 })
 
-
-app.use('/', dealerRoutes);
-app.use('/', vehicleRoutes);
-
-if(process.env.NODE_ENV === 'production'){
-  app.use(express.static('./cnx-frontend/build'));
-  app.get('*',(req, res)=>{
-    res.sendFile(path.resolve(__dirname,'cnx-frontend/build','index.html'));
-  })
-}
 
 const server = app.listen(port, () => console.log('Server ready'));
 
