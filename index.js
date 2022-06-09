@@ -26,7 +26,6 @@ app.use('/', vehicleRoutes);
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static('./cnx-frontend/build'));
   app.get('*',(req, res)=>{
-    console.log(path.resolve(__dirname,'cnx-frontend/build','index.html'));
     res.sendFile(path.resolve(__dirname,'cnx-frontend/build','index.html'));
   })
 }
