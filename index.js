@@ -7,9 +7,10 @@ const app = express();
 const port = process.env.PORT || 5000;
 const path = require('path');
 
-app.use('/', dealerRoutes);
-app.use('/', vehicleRoutes);
+app.use('/api', dealerRoutes);
+app.use('/api', vehicleRoutes);
 
+// for heroku deployment
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static('./cnx-frontend/build'));
   app.get('*',(req, res)=>{

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+// Vehicle row
 const Vehicle = (props) =>{
     const {vehicle:{bac, vin, ctpStatus, onstarStatus, createdAt, color, stockNumber, year}} = props
     return(

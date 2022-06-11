@@ -6,6 +6,7 @@ const Dealer = (props) =>{
     const redirectToDealerItem = () =>{
         history.push(`/vehicles/${bac}`)
     }
+    //return a row of dealer
     return(
         <Fragment >
             <tr onClick={redirectToDealerItem}>

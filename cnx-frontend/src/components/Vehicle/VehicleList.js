@@ -9,10 +9,11 @@ const VehicleList = () =>{
     const [isLoading, setIsLoading] = useState(false);
     const [errorText, setErrorText] = useState(false);
     const { id } = useParams()
+    // reqeust to backend when first mount
     useEffect(() => {
         requestFromBackend(`/api/vehicles/${id}`,setVehicle, setIsLoading,setErrorText);
     }, [id]);
-
+    // vehicle table
     return(
         <Fragment>
         <h2> Vehicles List</h2>    

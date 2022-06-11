@@ -6,10 +6,11 @@ const DealerList = () =>{
     const [dealerList, setDealers] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [errorText, setErrorText] = useState(false);
+    // reqeust to backend when first mount
     useEffect(() => {
         requestFromBackend('/api/dealers', setDealers, setIsLoading,setErrorText );
     }, []);
-
+    // render dealer table
     return(
         <Fragment>
         <h2> Dealers List</h2>    

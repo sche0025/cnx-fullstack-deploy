@@ -5,6 +5,7 @@ import DealerList from './components/Dealer/DealerList'
 import VehicleList from './components/Vehicle/VehicleList'
 import NotFound from './components/Other/NotFound'
 function App() {
+  // routings, when others, redirect to my cat
   return (
     <Router>
       <div className="App">
