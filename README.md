@@ -11,4 +11,10 @@ node v14 +
 
 then access: http://localhost:5000/
 
+# will retry on only frontend 
+
 # deployed address: https://cnx-edward-fullstack.herokuapp.com/
+
+# api
+https://cnx-edward-fullstack.herokuapp.com/api/vehicles/{bac}
+https://cnx-edward-fullstack.herokuapp.com/api/dealers
