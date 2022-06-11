@@ -16,7 +16,7 @@ const VehicleList = () =>{
     // vehicle table
     return(
         <Fragment>
-        <h2> Vehicles List</h2>    
+        <h2>List of Vehicles</h2>    
           <Table striped bordered hover>
                 <thead>
                     <tr>

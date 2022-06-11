@@ -13,7 +13,7 @@ const DealerList = () =>{
     // render dealer table
     return(
         <Fragment>
-        <h2> Dealers List</h2>    
+        <h2> List of Dealers</h2>    
           <Table striped bordered hover>
                 <thead>
                     <tr>
